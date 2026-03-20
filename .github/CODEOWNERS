@@ -2,7 +2,7 @@
 # Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # Default: feihongxu0824 reviews everything not covered below
-*                       @feihongxu0824
+*                       @bigbob0824
 
 # .github directory
 /.github/               @Cuiyus
