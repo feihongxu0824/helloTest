@@ -1,7 +1,7 @@
 name: Community PR Handler
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, reopened, ready_for_review]
 
 permissions:
@@ -27,10 +27,11 @@ jobs:
             console.log(`PR Author: ${prAuthor}, Association: ${association}, Is community: ${isCommunity}`);
             core.setOutput('is_community', isCommunity);
 
-      - name: Checkout for CODEOWNERS
+      - name: Checkout base branch for CODEOWNERS
         if: steps.check.outputs.is_community == 'true'
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.base.ref }}
           sparse-checkout: .github/CODEOWNERS
           sparse-checkout-cone-mode: false
 
