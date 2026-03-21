@@ -53,12 +53,3 @@ body:
         - label: Documentation
     validations:
       required: false
-
-  - type: input
-    id: assignee
-    attributes:
-      label: Preferred Assignee
-      description: Enter GitHub username to assign (leave empty for auto-assignment based on template type)
-      placeholder: "e.g., feihongxu0824 or leave empty for auto"
-    validations:
-      required: false
