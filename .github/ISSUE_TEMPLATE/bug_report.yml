@@ -77,6 +77,7 @@ body:
     attributes:
       label: Preferred Assignee
       description: Select who should handle this issue (optional - will be auto-assigned if not selected)
+      default: 0
       options:
         - Auto (default)
         - feihongxu0824
